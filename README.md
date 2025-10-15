@@ -17,10 +17,10 @@ Next, open a terminal and build a Docker image from the remote repository:
 docker build -t virattt-financial-agent https://github.com/virattt/financial-agent.git
 ```
 
-Then, run the Docker container, replacing `$OPENAI_API_KEY` and `$POLYGON_API_KEY` in the following command with your OpenAI and Polygon API keys:
+Then, run the Docker container, replacing `$GITEE_API_KEY` and `$POLYGON_API_KEY` in the following command with your Gitee AI and Polygon API keys:
 
 ```bash
-docker run -e OPENAI_API_KEY=$OPENAI_API_KEY -e POLYGON_API_KEY=$POLYGON_API_KEY -p 8000:8000 --name financial-agent -it virattt-financial-agent
+docker run -e GITEE_API_KEY=$GITEE_API_KEY -e POLYGON_API_KEY=$POLYGON_API_KEY -p 8000:8000 --name financial-agent -it virattt-financial-agent
 ```
 
 Navigate to `http://localhost:8000/agent/playground/` in your browser to interact with the agent.
@@ -51,8 +51,8 @@ poetry install
 poetry shell
 ```
 
-**Important**: To use this agent, you will need an OpenAI API key and a Polygon API key.
-- If you don't have an OpenAI API key, you can get one [here](https://platform.openai.com/).
+**Important**: To use this agent, you will need a Gitee AI API key and a Polygon API key.
+- If you don't have a Gitee AI API key, you can get one [here](https://ai.gitee.com/).
 - If you don't have a Polygon API key, you can get one [here](https://polygon.io/).
 
 Copy the `.env.example` file to a new file called `.env`:
@@ -61,12 +61,12 @@ Copy the `.env.example` file to a new file called `.env`:
 cp .env.example .env
 ```
 
-Then, open the `.env` file in a text editor and add your OpenAI and Polygon API keys.
+Then, open the `.env` file in a text editor and add your Gitee AI and Polygon API keys.
 
 Alternatively, you can set these environment variables in your terminal:
 
 ```bash
-export OPENAI_API_KEY=<your-openai-api-key>
+export GITEE_API_KEY=<your-gitee-api-key>
 export POLYGON_API_KEY=<your-polygon-api-key>
 ```
 
